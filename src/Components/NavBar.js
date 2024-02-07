@@ -11,8 +11,9 @@ export default function NavBar() {
   }
 
   return (
-    <div>
-      <nav className="flex py-2 px-5 justify-between shadow-md items-center">
+    <div className="sticky bg-secondary-100 -top-2 shadow-2xl block z-10">
+      {/* Nav Bar for Desktop */}
+      <nav className="flex py-2 px-5 justify-between items-center">
         <h3 className="text-2xl font-bold">Portfolio.</h3>
         <ul className="sm:flex hidden">
           <li>
@@ -31,6 +32,8 @@ export default function NavBar() {
             <Link>Contact</Link>
           </li>
         </ul>
+
+        {/* Nav Bar for Mobile */}
         <FontAwesomeIcon
           onClick={handleMenu}
           icon={open ? faBars : faTimes}
