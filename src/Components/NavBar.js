@@ -23,13 +23,13 @@ export default function NavBar() {
             <a href="#about">About</a>
           </li>
           <li>
-            <Link>Projects</Link>
+            <a href="#project">Projects</a>
           </li>
           <li>
-            <Link>Skills</Link>
+            <a href="#skill">Skills</a>
           </li>
           <li>
-            <Link>Contact</Link>
+            <a href="#contact">Contact</a>
           </li>
         </ul>
 
@@ -53,13 +53,13 @@ export default function NavBar() {
           <a href="#about">About</a>
         </li>
         <li>
-          <Link>Projects</Link>
+          <a href="#project">Projects</a>
         </li>
         <li>
-          <Link>Skills</Link>
+          <a href="#skill">Skills</a>
         </li>
         <li>
-          <Link>Contact</Link>
+          <a href="#contact">Contact</a>
         </li>
       </ul>
     </div>

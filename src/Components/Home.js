@@ -27,28 +27,10 @@ export default function Home() {
           every project.I'm always at your service to get the work done neatly,
           effectively and of desire. Click the button to contact me.
         </p>
-        <button class="ui-btn mx-auto w-36 mt-5">
+        <button class="ui-btn mx-auto w-36 mt-5 max-md:mb-7">
           <span>Contact Me</span>
         </button>
       </div>
     </div>
   );
 }
-
-// Text for the p tag in Home.js
-
-// Hello, I am a Full Stack Developer. I am passionate about building web
-//         applications. I am proficient in JavaScript, React, Node, Express, and
-//         MongoDB. I am also familiar with Python, Django, and SQL. I am currently
-//         learning TypeScript and GraphQL. I am looking for opportunities to work
-//         on exciting projects. I am open to both full-time and part-time
-//         positions. I am also open to internships and freelance work. I am open
-//         to working remotely. I am open to working with startups and small
-//         businesses. I am open to working with non-profits and social
-//         enterprises. I am open to working with established companies and
-//         corporations. I am open to working with individuals and teams. I am open
-//         to working with people from diverse backgrounds. I am open to working
-//         with people from different countries. I am open to working with people
-//         from different industries. I am open to working with people from
-//         different cultures. I am open to working with people from different age
-//         groups. I am open to working with people
