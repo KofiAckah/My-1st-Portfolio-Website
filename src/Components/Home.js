@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
-    <div className="grid md:grid-cols-3 lg:grid-cols-2 md:h-screen">
+    <div className="grid md:grid-cols-3 lg:grid-cols-2 md:h-screen" id="home">
       <div
         className="md:w-100-60 bg-white
       items-center justify-center flex md:order-2"
@@ -27,8 +27,8 @@ export default function Home() {
           every project.I'm always at your service to get the work done neatly,
           effectively and of desire. Click the button to contact me.
         </p>
-        <button className="bg-secondary-200 border-primary border-2 px-4 py-2 rounded-md mt-5 w-32 mx-auto hover:bg-primary hover:text-secondary-100 transition-all ease-in-out duration-500 font-semibold">
-          <Link>Contact Me</Link>
+        <button class="ui-btn mx-auto w-36 mt-5">
+          <span>Contact Me</span>
         </button>
       </div>
     </div>

@@ -17,10 +17,10 @@ export default function NavBar() {
         <h3 className="text-2xl font-bold">Portfolio.</h3>
         <ul className="sm:flex hidden">
           <li>
-            <Link>Home</Link>
+            <a href="#home">Home</a>
           </li>
           <li>
-            <Link>About</Link>
+            <a href="#about">About</a>
           </li>
           <li>
             <Link>Projects</Link>
@@ -47,10 +47,10 @@ export default function NavBar() {
         } flex flex-col sm:hidden bg-secondary-200`}
       >
         <li>
-          <Link>Home</Link>
+          <a href="#home">Home</a>
         </li>
         <li>
-          <Link>About</Link>
+          <a href="#about">About</a>
         </li>
         <li>
           <Link>Projects</Link>
