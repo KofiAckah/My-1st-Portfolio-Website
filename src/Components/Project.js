@@ -3,7 +3,7 @@ import React from "react";
 export default function Project() {
   return (
     <div className="md:h-screen" id="project">
-      <p>Project Here</p>
+      <h2>Projects</h2>
     </div>
   );
 }
