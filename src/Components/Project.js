@@ -1,53 +1,50 @@
 import React from "react";
 import { ProjectData } from "../Data/ProjectData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowAltCircleLeft,
+  faArrowAltCircleRight,
+} from "@fortawesome/free-solid-svg-icons";
 
 export default function Project() {
   const slideLeft = () => {
-    var slider = document.getElementById("slider");
-    slider.scrollLeft = slider.scrollLeft - 500;
+    let slider = document.getElementById("slider");
+    slider.scrollLeft = slider.scrollLeft - (window.innerWidth - 10);
   };
 
   const slideRight = () => {
-    var slider = document.getElementById("slider");
-    slider.scrollLeft = slider.scrollLeft + 500;
+    let slider = document.getElementById("slider");
+    slider.scrollLeft = slider.scrollLeft + (window.innerWidth - 10);
   };
 
   return (
     <div className="md:h-screen" id="project">
-      {/* <div className="relative flex items-center">
+      <div className="flex items-center relative">
         <FontAwesomeIcon
-          icon={faBars}
-          className="opacity-50 cursor-pointer hover:opacity-100"
+          icon={faArrowAltCircleLeft}
+          className="absolute opacity-50 cursor-pointer hover:opacity-100"
           onClick={slideLeft}
-          size={40}
+          size={20}
         />
         <div
+          className="overflow-x-scroll whitespace-nowrap scroll-smooth"
           id="slider"
-          className="w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide"
         >
           {ProjectData.map((item) => (
             <img
-              className="w-[220px] inline-block p-2 cursor-pointer hover:scale-105 ease-in-out duration-300"
               src={item.image}
-              alt="/"
+              alt="project"
+              className="inline-block"
+              id="pic"
             />
           ))}
         </div>
         <FontAwesomeIcon
-          icon={faBars}
-          className="opacity-50 cursor-pointer hover:opacity-100"
+          icon={faArrowAltCircleRight}
+          className="opacity-50 cursor-pointer hover:opacity-100 absolute right-0"
           onClick={slideRight}
           size={40}
         />
-      </div> */}
-      <div className="flex items-center relative">
-        <div className="overflow-x-scroll whitespace-nowrap scroll-smooth">
-          {ProjectData.map((item) => (
-            <img src={item.image} alt="project" className="inline-block" />
-          ))}
-        </div>
       </div>
     </div>
   );
