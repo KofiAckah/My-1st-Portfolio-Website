@@ -1,3 +1,25 @@
+.card {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
+  z-index: -1;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card:hover::before {
+  width: 100%;
+}
+
 .ui-btn {
   --btn-default-bg: rgb(41, 41, 41);
   --btn-padding: 15px 20px;

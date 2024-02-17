@@ -1,51 +1,32 @@
-import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { ProjectData } from "../Data/ProjectData";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faArrowAltCircleLeft,
-  faArrowAltCircleRight,
-} from "@fortawesome/free-solid-svg-icons";
 
 export default function Project() {
-  const slideLeft = () => {
-    let slider = document.getElementById("slider");
-    slider.scrollLeft = slider.scrollLeft - (window.innerWidth - 10);
-  };
-
-  const slideRight = () => {
-    let slider = document.getElementById("slider");
-    slider.scrollLeft = slider.scrollLeft + (window.innerWidth - 10);
+  var settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
   };
 
   return (
-    <div className="md:h-screen" id="project">
-      <div className="flex items-center relative">
-        <FontAwesomeIcon
-          icon={faArrowAltCircleLeft}
-          className="absolute opacity-50 cursor-pointer hover:opacity-100"
-          onClick={slideLeft}
-          size={20}
-        />
-        <div
-          className="overflow-x-scroll whitespace-nowrap scroll-smooth"
-          id="slider"
-        >
-          {ProjectData.map((item) => (
-            <img
-              src={item.image}
-              alt="project"
-              className="inline-block"
-              id="pic"
-            />
-          ))}
-        </div>
-        <FontAwesomeIcon
-          icon={faArrowAltCircleRight}
-          className="opacity-50 cursor-pointer hover:opacity-100 absolute right-0"
-          onClick={slideRight}
-          size={40}
-        />
-      </div>
+    <div className="flex flex-col justify-center md:h-screen" id="project">
+      <h1 className="text-center text-4xl font-bold py-10">Projects</h1>
+      <Slider {...settings} className="w-10/12 mx-auto lg:w-1/2 md:w-2/3">
+        {ProjectData.map((project) => (
+          <div key={project.id} className="card overflow-hidden">
+            <img src={project.image} alt={project.name} className="w-fit" />
+            <div className="">
+              <p>{project.name}</p>
+              <p>{project.description}</p>
+              <p>{project.tools}</p>
+            </div>
+          </div>
+        ))}
+      </Slider>
     </div>
   );
 }
