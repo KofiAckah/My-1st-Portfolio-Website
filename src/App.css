@@ -1,23 +1,58 @@
-.card {
+.btnLink {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1f242d;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  cursor: pointer;
+  border: none;
 }
 
-.card::before {
-  content: "";
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 5px;
+.btnLink:after {
+  content: " ";
+  width: 0%;
   height: 100%;
-  background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
-  z-index: -1;
-  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  background: #0ef;
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  right: 0;
 }
 
-.card:hover::before {
+.btnLink:hover::after {
+  right: auto;
+  left: 0;
   width: 100%;
+}
+
+.btnLink a {
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  letter-spacing: 0.3em;
+  z-index: 20;
+  transition: all 0.3s ease-in-out;
+}
+
+.btnLink:hover a {
+  color: #1f242d;
+  animation: scaleUp 0.3s ease-in-out;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.95);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 .ui-btn {
