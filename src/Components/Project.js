@@ -13,7 +13,7 @@ export default function Project() {
   };
 
   return (
-    <div className="flex flex-col justify-center md:h-screen" id="project">
+    <div className="flex flex-col justify-center md:h-screen mb-7" id="project">
       <h1 className="text-center text-4xl font-bold py-7">Projects</h1>
       <Slider
         {...settings}
