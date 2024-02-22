@@ -14,7 +14,9 @@ export default function Project() {
 
   return (
     <div className="flex flex-col justify-center md:h-screen mb-7" id="project">
-      <h1 className="text-center text-4xl font-bold py-7">Projects</h1>
+      <h1 className="font-bold text-4xl md:text-6xl mb-4 text-center py-7">
+        Projects
+      </h1>
       <Slider
         {...settings}
         className="w-10/12 mx-auto lg:w-1/2 md:w-2/3 shadow-md shadow-primary rounded-lg hover:shadow-2xl hover:shadow-primary transition-all duration-500 ease-in-out"
