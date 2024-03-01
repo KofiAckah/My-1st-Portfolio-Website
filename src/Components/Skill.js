@@ -15,7 +15,7 @@ export default function Skill() {
         {skillData.map((item) => (
           <div
             key={item.id}
-            className={`flex flex-col items-center m-4 sm:m-6 md:m-10 changeColor mx-auto hover:scale-125 transition-transform ease-in-out animate-delay-0.5s`}
+            className={`flex flex-col items-center m-4 sm:m-6 md:m-10  mx-auto hover:scale-125 transition-transform ease-in-out animate-none`}
           >
             <FontAwesomeIcon icon={item.icon} className="h-10 sm:h-20" />
             <p className="text-xl mt-2 font-bold">{item.text}</p>
