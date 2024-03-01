@@ -8,17 +8,17 @@ export default function Skill() {
       className="md:h-screen flex flex-col items-center justify-center"
       id="skill"
     >
-      <h2 className="font-bold text-4xl md:text-6xl my-4 text-center md:mb-14">
+      <h2 className="font-bold text-4xl md:text-6xl my-4 text-center">
         Skills
       </h2>
-      <div className="grid grid-cols-2">
+      <div className="grid grid-cols-2 md:grid-cols-3 w-full">
         {skillData.map((item) => (
           <div
             key={item.id}
-            className={`flex items-center m-4 sm:m-6 md:m-10 changeColor delay-${item.delay} duration-[${item.duration}]`}
+            className={`flex flex-col items-center m-4 sm:m-6 md:m-10 changeColor mx-auto hover:scale-125 transition-transform ease-in-out animate-delay-0.5s`}
           >
-            <FontAwesomeIcon icon={item.icon} className="h-6 sm:h-7" />
-            <p className="text-xl ml-2 font-bold">{item.text}</p>
+            <FontAwesomeIcon icon={item.icon} className="h-10 sm:h-20" />
+            <p className="text-xl mt-2 font-bold">{item.text}</p>
           </div>
         ))}
       </div>
