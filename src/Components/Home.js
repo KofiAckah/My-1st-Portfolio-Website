@@ -27,9 +27,11 @@ export default function Home() {
           every project.I'm always at your service to get the work done neatly,
           effectively and of desire. Click the button to contact me.
         </p>
-        <button class="ui-btn mx-auto w-44 mt-5 max-md:mb-7">
-          <span>Contact Me</span>
-        </button>
+        <Link smooth to="#contact">
+          <button class="ui-btn mx-auto w-44 mt-5 max-md:mb-7">
+            <span>Contact Me</span>
+          </button>
+        </Link>
       </div>
     </div>
   );

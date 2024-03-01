@@ -13,7 +13,7 @@ import {
 export default function Contact() {
   return (
     <div className="md:h-screen grid md:grid-cols-2 text-lg" id="contact">
-      <div className="flex-col justify-center flex relative">
+      <div className="flex-col justify-center flex relative max-md:order-2">
         <h2 className="font-bold text-4xl md:text-6xl my-4 text-center mx-auto">
           CONTACT ME
         </h2>
@@ -83,7 +83,7 @@ export default function Contact() {
           <p className="max-md:ml-2">Livingstone Ackah&reg;</p>
         </div>
       </div>
-      <div className="items-center justify-center flex bg-black h-full max-md:hidden">
+      <div className="items-center justify-center flex bg-black h-full">
         <img src={BgImage} alt="Contact Icon" className="" />
       </div>
     </div>
