@@ -35,8 +35,7 @@ export const ProjectData = [
     id: 4,
     name: "Vegen Fruits",
     image: VegenImage,
-    site: "",
-    // site: "https://vegenfruits.netlify.app/",
+    site: "https://vegenfruits.netlify.app/",
     description:
       "With this website you get to know more about the company and the services they offer. It give more info about fruits and vegetables.",
     tools: "HTML, CSS, Tailwind CSS",
